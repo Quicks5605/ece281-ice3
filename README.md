@@ -24,3 +24,9 @@ Then it **elaborates** the *any* entity with the name `*_tb`.
 Finally, the workflow **runs** the simulation. If successful then it will quietly exit with a `0` code.
 If any of the `assert` statements fail **with** `severity failure` then GHDL will cease the simulation and exit with non-zero code; this will also cause the workflow to fail.
 Assert statements of other severity levels will be reported, but not fail the workflow.
+
+![Simulation waveform image](sim.png)
+
+##Documentation:
+C3C rust and I worked on trying to figure out the test bench together, and checked over simulation results. C1C Khan helped me figure out that for whatever reason the top layer needed to be moved from design to the simulation layer for it to run properly. 
+
